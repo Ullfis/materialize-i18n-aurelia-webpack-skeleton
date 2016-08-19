@@ -9,12 +9,27 @@ Bluebird.config({ warnings: false });
 import 'jquery';
 import 'materialize-css';
 import {Aurelia} from 'aurelia-framework';
+import Backend from 'i18next-xhr-backend';
 
 export async function configure(aurelia: Aurelia) {
   aurelia.use
     .standardConfiguration()
     .developmentLogging()
-    .plugin('aurelia-materialize-bridge', b => b.useAll());
+    .plugin('aurelia-materialize-bridge', b => b.useAll())
+    .plugin('aurelia-i18n', instance => {
+      instance.i18next.use(Backend);
+      return instance.setup({
+        ns: ['translation'],
+        defaultNs: 'translation',
+        backend: {
+          loadPath: 'locales/{{lng}}/{{ns}}.json',
+        },
+        lng : 'en',
+        attributes : ['t','i18n'],
+        fallbackLng : 'en',
+        debug : false
+      });
+  });
 
   // Uncomment the line below to enable animation.
   // aurelia.use.plugin('aurelia-animator-css');

@@ -66,6 +66,11 @@ const baseConfig = {
   }
 }
 
+const fileCopyPattern = [
+  { from: 'favicon.ico', to: 'favicon.ico' },
+  { from: 'locales', to: 'locales' }
+]
+
 // advanced configuration:
 switch (ENV) {
   case 'production':
@@ -95,7 +100,7 @@ switch (ENV) {
         ({appChunkName: 'app', firstChunk: 'aurelia-bootstrap'}),
 
       require('@easy-webpack/config-copy-files')
-        ({patterns: [{ from: 'favicon.ico', to: 'favicon.ico' }]}),
+        ({patterns: fileCopyPattern}),
 
       require('./config-uglify')
         ({debug: false})
@@ -155,7 +160,7 @@ switch (ENV) {
         ({minify: false}),
 
       require('@easy-webpack/config-copy-files')
-        ({patterns: [{ from: 'favicon.ico', to: 'favicon.ico' }]}),
+        ({patterns: fileCopyPattern}),
 
       require('@easy-webpack/config-common-chunks-simple')
         ({appChunkName: 'app', firstChunk: 'aurelia-bootstrap'})
