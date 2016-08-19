@@ -1,0 +1,8 @@
+/.awcache
+.DS_STORE
+/.tsbuild
+/dist
+node_modules
+npm-debug.log*
+/electron.js*
+/test/coverage

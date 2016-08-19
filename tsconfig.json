@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "es6",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "allowJs": false,
+    "outDir": ".tsbuild"
+  },
+  "awesomeTypescriptLoaderOptions": {
+    "doTypeCheck": true,
+    "forkChecker": true,
+    "useBabel": true,
+    "useCache": true,
+    "babelOptions": {
+      "presets": ["es2015-loose-native-modules"]
+    }
+  },
+  "exclude": [
+    "node_modules",
+    "dist",
+    "release",
+    "index.js",
+    "webpack.config.js",
+    "config-uglify.js",
+    "config"
+  ]
+}

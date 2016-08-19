@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%- webpackConfig.metadata.title %></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <base href="<%- webpackConfig.metadata.baseUrl %>">
+    <!-- imported CSS are concatenated and added automatically -->
+  </head>
+  <body aurelia-app="main">
+    <div class="splash">
+      <div class="message"><%- webpackConfig.metadata.title %></div>
+      <div class="preloader-wrapper big active">
+        <div class="spinner-layer spinner-blue-only">
+          <div class="circle-clipper left">
+            <div class="circle"></div>
+          </div><div class="gap-patch">
+            <div class="circle"></div>
+          </div><div class="circle-clipper right">
+            <div class="circle"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <% if (webpackConfig.metadata.ENV === 'development') { %>
+    <!-- Webpack Dev Server reload -->
+    <script src="/webpack-dev-server.js"></script>
+    <% } %>
+  </body>
+</html>
