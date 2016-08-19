@@ -1,8 +1,9 @@
-# materialize-aurelia-webpack-skeleton
+# materialize-i18n-aurelia-webpack-skeleton
 
-Testing materialize and [Aurelia](http://aurelia.io)
-- [aurelia-materialize-bridge](https://github.com/aurelia-ui-toolkits/aurelia-materialize-bridge)
+Testing materialize, aurelia-i18n and [Aurelia](http://aurelia.io)
 - [skeleton-typescript-webpack](https://github.com/aurelia/skeleton-navigation/tree/master/skeleton-typescript-webpack)
+- [aurelia-materialize-bridge](https://github.com/aurelia-ui-toolkits/aurelia-materialize-bridge)
+- [aurelia-i18n](https://github.com/aurelia/i18n)
 
 (tests removed)
 
