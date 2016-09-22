@@ -21,10 +21,7 @@
   "exclude": [
     "node_modules",
     "dist",
-    "release",
     "index.js",
-    "webpack.config.js",
-    "config-uglify.js",
-    "config"
+    "webpack.config.js"
   ]
 }
