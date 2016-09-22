@@ -106,8 +106,8 @@ switch (ENV) {
       require('@easy-webpack/config-copy-files')
         ({patterns: fileCopyPattern}),
 
-      require('./config-uglify')
-        ({debug: false})
+      require('@easy-webpack/config-uglify')
+        ({debug: false, mangle: {screw_ie8 : true, keep_fnames: false}})
     );
     break;
 
